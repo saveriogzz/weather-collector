@@ -14,7 +14,7 @@ public class DavisMessage {
     float longitude;
     float altitude;
     String ts;
-    String date;
+    String month;
     float temp_out;
     float temp_in;
     int hum_out;

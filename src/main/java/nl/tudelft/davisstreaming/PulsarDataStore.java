@@ -156,7 +156,7 @@ public class PulsarDataStore implements DataStore {
         final String formattedtimestamp = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
                 .format(timestamp);
 
-        final String formatteddate = new SimpleDateFormat("yyyy-MM-dd")
+        final String formattedmonth = new SimpleDateFormat("yyyy-MM")
                 .format(timestamp);
 
         producer.newMessage().value(DavisMessage.builder()
@@ -166,7 +166,7 @@ public class PulsarDataStore implements DataStore {
                 .longitude(lon)
                 .altitude(alt)
                 .ts(formattedtimestamp)
-                .date(formatteddate)
+                .month(formattedmonth)
                 .temp_out((float) rec.getOutsideTemperature())
                 .temp_in((float) rec.getInsideTemperature())
                 .hum_out((short) rec.getOutsideHumidity())
